@@ -1,48 +1,65 @@
-# 🎬 CapCut AutoDirector Engine (Headless Automation)
+<div align="center"><h1>CapCut-AutoDirector</h1><p><strong>Headless Automation Engine for CapCut Video Editing</strong> | <strong>محرك أتمتة لا رأسي لتحرير الفيديو في CapCut</strong></p><p><code>License: MIT Modified</code> <code>Platform: Cross-Platform</code> <code>Developed by: Bob</code></p></div>
 
-> **⚠️ حالة المشروع: قيد التطوير المستمر (Work in Progress / Beta)**  
-> تم بناء هذه الهيكلة كإثبات مفهوم (Proof of Concept) للتحكم الخفي (Headless) ببرنامج CapCut عبر تعديل ملفات الـ JSON مباشرة، وتجاوز القيود المعتادة لواجهات المستخدم (UI Automation). المشروع حالياً قيد التطوير وقابل للتوسعة.
+* * *
 
----
+CapCut-AutoDirector is a Python-based Proof of Concept project aimed at enabling headless automation for CapCut video editing workflows. It focuses on programmatic control over CapCut operations, laying the groundwork for automated video content generation and processing without a graphical user interface.
 
-## 🌟 نبذة عن المشروع
-هذا المشروع هو مجموعة من الأدوات والمحركات المكتوبة بلغة **Python** والتي تتيح لك أتمتة عملية المونتاج بالكامل على تطبيق CapCut المكتبي (Desktop).
-بدلاً من تحريك الفأرة أو فتح التطبيق لإنشاء المشاريع، يقوم المحرك بـ:
-- بناء التايم لاين (Timeline) برمجياً من الصفر.
-- حساب التداخل الزمني بالمايكروثانية (Microsecond Overlaps) لضمان انتقالات سلسة.
-- حقن الموسيقى، النصوص، والحركات (Keyframing/Animations).
-- استخدام تقنيات الذكاء الاصطناعي البصري (OpenCV) لتحليل المقاطع واختيار القوالب المناسبة (Smart Director).
-- تشغيل التطبيق ليكون جاهزاً للرندر بنقرة واحدة.
+CapCut-AutoDirector هو مشروع إثبات مفهوم يعتمد على بايثون ويهدف إلى تمكين الأتمتة اللا رأسية لسير عمل تحرير الفيديو في CapCut. يركز المشروع على التحكم البرمجي في عمليات CapCut، مما يمهد الطريق لإنشاء ومعالجة محتوى الفيديو تلقائيًا دون الحاجة إلى واجهة مستخدم رسومية.
 
----
+* * *
 
-## 📂 محتويات المشروع (Scripts)
-تجد في مجلد `src` الملفات التالية المرتبة حسب مراحل التطوير:
-1. `00_template_scraper.py`: أداة لاستخراج وحفظ فلاتر وانتقالات CapCut الجاهزة إلى قاعدة بيانات محلية (JSON).
-2. `01_core_headless_builder.py`: المحرك الأساسي لإنشاء مشروع فارغ وإدراج الفيديوهات بشكل متسلسل ومترابط.
-3. `02_advanced_json_transitions.py`: يطبق هندسة التلاعب بالسرعة (Speed Ramping) والانتقالات المتداخلة بدقة متناهية.
-4. `03_audio_text_injector.py`: مخصص لحقن المسارات الصوتية (BGM) والعقد النصية، مع تفعيل أتمتة تصدير الفيديو فور الفتح.
-5. `04_smart_director_vision.py`: المحرك الذكي؛ يقوم بقراءة الفيديوهات باستخدام OpenCV لتصنيفها (أكشن، أنمي، شروحات) ويطبق حركات الكاميرا المناسبة.
-6. `05_template_engine.py`: يقرأ من قاعدة البيانات ويدرج التأثيرات والنصوص الجاهزة (مثل Cyberpunk Text) في المقاطع المستهدفة.
+## Features | المميزات
 
----
+### 1\. Core Headless Automation | الأتمتة الأساسية اللا رأسية
 
-## 🚀 كيفية الاستخدام
-1. تأكد من تثبيت مكتبات بايثون المطلوبة:
-   ```bash
-   pip install opencv-python pyautogui
-   ```
-2. قم بتعديل مسارات الفيديوهات الوهمية في أسفل كل ملف لتدل على مسار الفيديوهات الفعلي في جهازك (مثلاً: `C:\path\to\your\videos`).
-3. شغل أي سكربت من مجلد `src`، وسيقوم ببناء المشروع في مجلد مشاريع CapCut الخاصة بك وفتح البرنامج تلقائياً.
+*   Programmatic control over CapCut functionalities. | التحكم البرمجي في وظائف CapCut.
+*   Foundation for automated video editing workflows. | أساس لسير عمل تحرير الفيديو المؤتمت.
 
----
+### 2\. Proof of Concept Capabilities | قدرات إثبات المفهوم
 
-## ⚖️ سياسة الاستخدام والحقوق (License & Terms of Use)
+*   Demonstrates feasibility of CapCut API interaction. | يوضح جدوى التفاعل مع واجهة برمجة تطبيقات CapCut.
+*   Designed for scripting custom video generation tasks. | مصمم لبرمجة مهام إنشاء الفيديو المخصصة.
 
-- **الحقوق الفكرية:** صُمم وطُوّر هذا النظام بالكامل بواسطة **Mr. Bob** (© 2026).
-- **التطوير المفتوح (Open Source Contribution):** الشفرة البرمجية (الكود) مفتوحة المصدر بالكامل. لأي مطور أو صانع محتوى الحرية المطلقة في **أخذ الكود، التعديل عليه، تطويره**، ودمجه في مشاريعه الخاصة (اللي يأخذ يطور عليه عادي).
-- **الاستخدام العادل:** لا يتحمل المطور الأصلي أي مسؤولية عن فقدان بيانات أو تلف مساحات عمل (Workspaces) ناتجة عن الاستخدام الخاطئ للمحرك. يُنصح دائماً بأخذ نسخة احتياطية لمشاريع CapCut قبل تشغيل سكربتات التعديل العميق.
-- **إعادة النشر:** يُسمح بنشر هذا العمل أو أجزاء منه بشرط ذكر المصدر (إشارة إلى Mr. Bob) وعدم بيعه كمنتج مغلق المصدر.
+* * *
 
----
-*تمت أتمتة المونتاج، الآن دورك لتبدع!* 🎬✨
+## Build from Source | البناء من المصدر
+
+### Requirements | المتطلبات
+
+*   Python 3.12+
+*   Modern Browser
+
+### Setup | الإعداد
+
+```bash
+# Clone the repository
+git clone https://github.USERNAME/CapCut-AutoDirector.git
+cd CapCut-AutoDirector
+
+# Install dependencies (using pip for Python)
+pip install -r requirements.txt # Assuming a requirements.txt file will be present
+
+# Run the application (example Python script)
+python main.py # Replace with your main script
+```
+
+* * *
+
+## Tech Stack | التقنيات
+
+| Component | Technology |
+| :-- | :-- |
+| **Platform/Environment** | Python Scripting Environment / CLI |
+| **Core Logic** | Python |
+
+* * *
+
+## Terms of Use | شروط الاستخدام
+
+1.  **Personal Use:** Free for personal, non-commercial use. (الاستخدام الشخصي مجاني وغير تجاري).
+2.  **Modification:** You may modify this software for personal use. Public distribution requires written permission. (يمكنك تعديل البرنامج للاستخدام الشخصي. التوزيع العام للنسخ المعدلة يتطلب إذن كتابي).
+3.  **No Warranty:** This software is provided as-is. The developer is not responsible for any damage or data loss. (البرنامج مقدم كما هو. المطور غير مسؤول عن أي ضرر أو فقدان بيانات).
+
+* * *
+
+<div align="center"><strong>Developed with passion by Bob</strong><br>All rights reserved © 2026<br><br><em>This project is licensed under a Modified MIT License — see the LICENSE file for details.</em><br><em>هذا المشروع مرخص بموجب رخصة MIT معدّلة — راجع ملف LICENSE للتفاصيل.</em></div>
